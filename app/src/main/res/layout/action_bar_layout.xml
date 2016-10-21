@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/matchFixedValue50">
+
+    <ImageView
+        android:id="@+id/iv_actionBar_back"
+        style="@style/wrapWrap"
+        android:paddingBottom="@dimen/padding_5"
+        android:paddingTop="@dimen/padding_5"
+        android:src="@drawable/back"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_actionBar_left"
+        style="@style/wrapMatch.lr_tv"
+        android:visibility="gone"
+        tools:text="left" />
+
+    <TextView
+        android:id="@+id/tv_actionBar_title"
+        style="@style/hWeightMatch.title_tv"
+        tools:text="title" />
+
+
+    <TextView
+        android:id="@+id/tv_actionBar_right"
+        style="@style/wrapMatch.lr_tv"
+        android:layout_marginRight="@dimen/marging_16"
+        android:visibility="gone"
+        tools:text="right" />
+</LinearLayout>

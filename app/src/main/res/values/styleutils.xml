@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--所有控件的宽高-->
+    <style name="wrapWrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="matchMatch">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="wrapMatch">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="matchWrap">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!--线性布局的权重===水平分割-->
+
+    <style name="hWeightWrap">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="hWeightMatch">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <!--线性布局的权重===垂直分割-->
+
+    <style name="vWrapWeight">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">0dp</item>
+    </style>
+
+    <style name="vMatchWeight">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">0dp</item>
+    </style>
+    <!--线性布局的方向相关-->
+    <style name="matchMatch.vertical">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="matchMatch.horizontal">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="matchWrap.vertical">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="matchWrap.horizontal">
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <!--线性布局分割线相关-->
+    <style name="matchMatch.vertical.divider">
+        <item name="android:divider">@drawable/divider_linear_horizon</item>
+        <item name="android:showDividers">beginning|middle|end</item>
+    </style>
+
+    <style name="matchWrap.horizontal.divider">
+        <item name="android:divider">@drawable/divider_linear_vertical</item>
+        <item name="android:showDividers">middle</item>
+    </style>
+    <!--actionBar-->
+    <style name="matchFixedValue50">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/action_bar_h_50</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/blue</item>
+    </style>
+    <!--actionBar中的标题-->
+    <style name="hWeightMatch.title_tv">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_size_large_22</item>
+        <item name="android:layout_marginLeft">@dimen/margin_10</item>
+        <item name="android:layout_marginRight">@dimen/margin_10</item>
+    </style>
+    <!--actionBar中的左右按钮-->
+    <style name="wrapMatch.lr_tv">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_size_medium_18</item>
+    </style>
+</resources>

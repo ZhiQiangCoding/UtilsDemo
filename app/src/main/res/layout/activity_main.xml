@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/matchMatch.vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        style="@style/matchWrap"
+        android:gravity="center"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:text="@string/stringValue1" />
+
+    <ScrollView style="@style/matchMatch">
+
+        <LinearLayout style="@style/matchMatch.vertical.divider">
+
+            <LinearLayout style="@style/matchWrap.horizontal.divider">
+
+                <TextView
+                    android:id="@+id/tv_1"
+                    style="@style/hWeightWrap"
+                    android:drawableLeft="@mipmap/ic_launcher"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:gravity="center_vertical"
+                    android:text="线性垂直分割线" />
+
+                <TextView
+                    style="@style/hWeightWrap"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:drawableRight="@mipmap/ic_launcher"
+                    android:gravity="center_vertical|right"
+                    android:text="线性垂直分割线" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_dayNight"
+                style="@style/matchWrap.horizontal"
+                android:paddingLeft="@dimen/marging_16"
+                android:paddingRight="@dimen/marging_16">
+
+                <TextView
+                    android:id="@+id/tv_dayNight"
+                    style="@style/matchWrap"
+                    android:drawableLeft="@drawable/day_night"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:drawableRight="@drawable/next"
+                    android:gravity="center_vertical"
+                    android:text="夜间模式" />
+            </LinearLayout>
+
+            <com.czq.utilsdemo.widget.EditTextWithDelete
+                android:id="@+id/et_phone"
+                style="@style/matchWrap"
+                android:layout_margin="@dimen/margin_5"
+                android:background="@drawable/shape_et_bg"
+                android:hint="请输入手机号码"
+                android:inputType="number"
+                android:lines="1"
+                android:maxLength="11"
+                android:padding="@dimen/padding_10" />
+
+            <TextView
+                android:id="@+id/tv_test_adapter"
+                style="@style/matchWrap"
+                android:padding="@dimen/padding_10"
+                android:text="测试万能适配器" />
+            <TextView
+                android:id="@+id/tv_bgaRefreshlayout"
+                style="@style/matchWrap"
+                android:padding="@dimen/padding_10"
+                android:text="BGARefreshLayout" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

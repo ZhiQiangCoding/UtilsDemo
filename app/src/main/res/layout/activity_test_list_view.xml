@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/matchMatch"
+    android:orientation="vertical"
+    tools:context="com.czq.utilsdemo.activity.TestListViewActivity">
+
+    <ListView
+        android:id="@+id/lv_test"
+        style="@style/matchMatch" />
+</LinearLayout>

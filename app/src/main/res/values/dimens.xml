@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <!--actionBar的高度-->
+    <dimen name="action_bar_h_50">50dp</dimen>
+    <!--android默认字体的大小-->
+    <dimen name="text_size_micro_12">12sp</dimen>
+    <dimen name="text_size_small_14">14sp</dimen>
+    <dimen name="text_size_medium_18">18sp</dimen>
+    <dimen name="text_size_large_22">22sp</dimen>
+    <!--零-->
+    <dimen name="zero">0dp</dimen>
+    <!--内边距相关-->
+    <dimen name="padding_5">5dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="padding_16">16dp</dimen>
+    <dimen name="padding_20">20dp</dimen>
+    <!--外边距相关-->
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="marging_16">16dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <!--分割线相关-->
+    <dimen name="lines_0.1">0.1dp</dimen>
+    <dimen name="lines_1">1dp</dimen>
+    <dimen name="lines_2">2dp</dimen>
+</resources>

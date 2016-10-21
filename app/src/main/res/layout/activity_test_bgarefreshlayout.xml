@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/matchMatch.vertical"
+    tools:context="com.czq.utilsdemo.activity.TestBGARefreshlayoutActivity">
+
+    <include layout="@layout/action_bar_layout" />
+
+    <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+        android:id="@+id/refreshlayout"
+        style="@style/matchMatch">
+
+        <ListView
+            android:id="@+id/lv"
+            style="@style/vMatchWeight" />
+
+
+    </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+</LinearLayout>
