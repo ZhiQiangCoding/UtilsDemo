@@ -60,6 +60,13 @@ public class MainActivity extends BaseActivity {
         Drawable[] drawables = tv.getCompoundDrawables();
         drawables[0].setBounds(0, 0, 30, 30);
         tv.setCompoundDrawables(drawables[0], drawables[1], drawables[2], drawables[3]);
+
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+
+            }
+        });
     }
 
     @Override
