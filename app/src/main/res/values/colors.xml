@@ -8,4 +8,6 @@
     <color name="black">#000000</color>  <!--黑色-->
     <color name="whrite">#ffffff</color>  <!--白色-->
     <color name="blue">#07afec</color>
+    <color name="light_dark">#55000000</color>
+
 </resources>
