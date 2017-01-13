@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.TestListViewActivity" />
-        <activity android:name=".activity.TestBGARefreshlayoutActivity"></activity>
+        <activity android:name=".activity.TestBGARefreshlayoutActivity" />
+        <activity android:name=".activity.TestHttpActivity"></activity>
     </application>
 
 </manifest>
