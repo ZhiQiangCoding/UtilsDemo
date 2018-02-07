@@ -8,8 +8,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.czq.utilsdemo.activity.BaseActivity;
+import com.czq.utilsdemo.activity.LockPatternActivity;
 import com.czq.utilsdemo.activity.TestBGARefreshlayoutActivity;
+import com.czq.utilsdemo.activity.TestHttpActivity;
 import com.czq.utilsdemo.activity.TestListViewActivity;
+import com.czq.utilsdemo.popup.TestPopupActivity;
 import com.czq.utilsdemo.qqZone.QQZoneActivity;
 import com.czq.utilsdemo.utils.LogUtils;
 import com.czq.utilsdemo.utils.ToastUtils;
@@ -24,6 +27,15 @@ public class MainActivity extends BaseActivity {
     private TextView tv_bgaRefreshlayout;//测试 下拉刷新下拉加载更多
     private TextView tv_qqzone;//测试 仿qq空间图片缩放
     private TextView lock_pattern_txt;//测试 九宫格锁
+    /**
+     * 网络请求
+     */
+    private TextView mTvNetWork;
+    /**
+     * popupwindow
+     */
+    private TextView mTvPopup;
+
 
     /**
      * 初始化布局以及view控件
@@ -37,9 +49,11 @@ public class MainActivity extends BaseActivity {
         ll_dayNight = getViewById(R.id.ll_dayNight);
         et_phone = getViewById(R.id.et_phone);
         tv_test_adapter = getViewById(R.id.tv_test_adapter);
-        tv_bgaRefreshlayout=getViewById(R.id.tv_bgaRefreshlayout);
-        tv_qqzone=getViewById(R.id.tv_qqzone);
-        lock_pattern_txt=getViewById(R.id.lock_pattern_txt);
+        tv_bgaRefreshlayout = getViewById(R.id.tv_bgaRefreshlayout);
+        tv_qqzone = getViewById(R.id.tv_qqzone);
+        lock_pattern_txt = getViewById(R.id.lock_pattern_txt);
+        mTvNetWork = getViewById(R.id.tv_net_work);
+        mTvPopup = getViewById(R.id.tv_popup);
 
     }
 
@@ -54,6 +68,8 @@ public class MainActivity extends BaseActivity {
         tv_bgaRefreshlayout.setOnClickListener(this);
         tv_qqzone.setOnClickListener(this);
         lock_pattern_txt.setOnClickListener(this);
+        mTvNetWork.setOnClickListener(this);
+        mTvPopup.setOnClickListener(this);
     }
 
     /**
@@ -100,7 +116,17 @@ public class MainActivity extends BaseActivity {
                 startActivity(new Intent(mActivity, QQZoneActivity.class));
                 break;
             case R.id.lock_pattern_txt://测试九宫格锁
-                startActivity(new Intent(mActivity, QQZoneActivity.class));
+                startActivity(new Intent(mActivity, LockPatternActivity.class));
+                break;
+            //测试网络请求
+            case R.id.tv_net_work:
+                startActivity(new Intent(mActivity, TestHttpActivity.class));
+                break;
+            //popupwindow
+            case R.id.tv_popup:
+                startActivity(new Intent(mActivity, TestPopupActivity.class));
+                break;
+            default:
                 break;
         }
     }

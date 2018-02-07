@@ -2,8 +2,6 @@ package com.czq.utilsdemo.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.view.MotionEvent;
 
 import com.czq.utilsdemo.R;
@@ -18,8 +16,6 @@ public class TestTouchActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_touch);
-        LinearLayoutManager layoutManager=new LinearLayoutManager(this);
-        GridLayoutManager gridLayoutManager=new GridLayoutManager(this,1);
 
     }
 

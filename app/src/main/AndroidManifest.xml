@@ -13,23 +13,19 @@
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
         <activity android:name=".MainActivity">
-
-        </activity>
-        <activity android:name=".activity.TestListViewActivity" />
-        <activity android:name=".activity.TestBGARefreshlayoutActivity" />
-        <activity android:name=".activity.TestHttpActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.TestListViewActivity" />
+        <activity android:name=".activity.TestBGARefreshlayoutActivity" />
+        <activity android:name=".activity.TestHttpActivity"/>
         <activity android:name=".activity.TestTouchActivity" />
         <activity android:name=".qqZone.QQZoneActivity" />
         <activity android:name=".activity.LockPatternActivity" />
-        <activity android:name=".popup.TestPopupActivity">
-
-        </activity>
+        <activity android:name=".popup.TestPopupActivity"/>
     </application>
 
 </manifest>

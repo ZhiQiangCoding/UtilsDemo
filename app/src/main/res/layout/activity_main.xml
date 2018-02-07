@@ -82,6 +82,18 @@
                 style="@style/matchWrap"
                 android:padding="@dimen/padding_10"
                 android:text="九宫格锁" />
+
+            <TextView
+                android:id="@+id/tv_net_work"
+                style="@style/matchWrap"
+                android:padding="@dimen/padding_10"
+                android:text="网络请求" />
+
+            <TextView
+                android:id="@+id/tv_popup"
+                style="@style/matchWrap"
+                android:padding="@dimen/padding_10"
+                android:text="popupWindow的封装" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
