@@ -1,7 +1,6 @@
 package com.czq.utilsdemo.httputils;
 
 import android.os.Handler;
-import android.os.Looper;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -22,7 +21,7 @@ import okhttp3.Response;
  */
 
 public class OkHttpRequestManager implements IRequestManager {
-    public static final MediaType TYPE_JSON = MediaType.parse("application/json;charset=utf-8");
+    private static final MediaType TYPE_JSON = MediaType.parse("application/json;charset=utf-8");
     private OkHttpClient okHttpClient;
     private Handler handler;
 
@@ -108,7 +107,6 @@ public class OkHttpRequestManager implements IRequestManager {
                 handler.post(new Runnable() {
                     @Override
                     public void run() {
-                        boolean isMian = Looper.getMainLooper() == Looper.myLooper();
                         callBack.onFailure(e);
                     }
                 });
@@ -118,17 +116,11 @@ public class OkHttpRequestManager implements IRequestManager {
             public void onResponse(final Call call, final Response response) throws IOException {
                 boolean successful = response.isSuccessful();
                 if (successful) {
+                    final String json = response.body().string();
                     handler.post(new Runnable() {
                         @Override
                         public void run() {
-                            try {
-                                boolean isMian = Looper.getMainLooper() == Looper.myLooper();
-                                String json = response.body().string();
-                                callBack.onSuccess(json);
-
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            }
+                            callBack.onSuccess(json);
                         }
                     });
                 } else {

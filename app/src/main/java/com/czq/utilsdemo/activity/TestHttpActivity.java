@@ -4,6 +4,10 @@ import android.os.Bundle;
 import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.czq.utilsdemo.R;
 import com.czq.utilsdemo.httputils.IRequestCallBack;
@@ -14,28 +18,50 @@ import com.czq.utilsdemo.utils.LogUtils;
 public class TestHttpActivity extends AppCompatActivity {
     private static final String TAG = "===" + TestHttpActivity.class.getSimpleName() + "::";
 
+    /**
+     * 下载
+     */
+    private Button mBtn;
+    /**
+     *
+     */
+    private TextView mTvShow;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_http);
-        //测试请求
-        String url = "http://api.test.yonghui.cn/b2b/merchant/app/version?deviceType=1&version=2.5.0_test_a1---";
-        //这里发起请求依赖的是IRequestManager接口
-        IRequestManager requestManager = RequestFactory.getIRequestManager();
-        requestManager.get(url, new IRequestCallBack() {
-            @Override
-            public void onSuccess(String response) {
-                boolean isMian = Looper.getMainLooper() == Looper.myLooper();
-                LogUtils.e("===="+isMian);
-                Log.e(TAG, "onSuccess: " + response);
-            }
+        mBtn = findViewById(R.id.btn_download);
+        mTvShow = findViewById(R.id.tv_show);
 
+        final IRequestManager requestManager = RequestFactory.getIRequestManager();
+        //测试请求
+        final String url = "http://v.juhe.cn/boxoffice/rank?area=&dtype=&key=4808cf0770c56ef2f1f970dc310a3d4c";
+        //这里发起请求依赖的是IRequestManager接口
+        mBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onFailure(Throwable throwable) {
-                boolean isMian = Looper.getMainLooper() == Looper.myLooper();
-                LogUtils.e("===="+isMian);
-                Log.e(TAG, "onFailure: " + throwable.getMessage());
+            public void onClick(View v) {
+                requestManager.get(url, new IRequestCallBack() {
+                    @Override
+                    public void onSuccess(String response) {
+                        boolean isMian = Looper.getMainLooper() == Looper.myLooper();
+                        LogUtils.e("====" + isMian);
+                        Log.e(TAG, "onSuccess: " + response);
+                        Toast.makeText(TestHttpActivity.this, "onSuccess", Toast.LENGTH_SHORT).show();
+                        mTvShow.setText(response);
+                    }
+
+                    @Override
+                    public void onFailure(Throwable throwable) {
+                        boolean isMian = Looper.getMainLooper() == Looper.myLooper();
+                        LogUtils.e("====" + isMian);
+                        Log.e(TAG, "onFailure: " + throwable.getMessage());
+                        Toast.makeText(TestHttpActivity.this, "onFailure", Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
         });
+
     }
 }
