@@ -1,6 +1,7 @@
 package com.czq.utilsdemo.httputils;
 
 import android.os.Handler;
+import android.os.Looper;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -107,6 +108,7 @@ public class OkHttpRequestManager implements IRequestManager {
                 handler.post(new Runnable() {
                     @Override
                     public void run() {
+                        boolean isMian = Looper.getMainLooper() == Looper.myLooper();
                         callBack.onFailure(e);
                     }
                 });
@@ -114,13 +116,16 @@ public class OkHttpRequestManager implements IRequestManager {
 
             @Override
             public void onResponse(final Call call, final Response response) throws IOException {
-                if (response.isSuccessful()) {
+                boolean successful = response.isSuccessful();
+                if (successful) {
                     handler.post(new Runnable() {
                         @Override
                         public void run() {
                             try {
+                                boolean isMian = Looper.getMainLooper() == Looper.myLooper();
                                 String json = response.body().string();
                                 callBack.onSuccess(json);
+
                             } catch (IOException e) {
                                 e.printStackTrace();
                             }

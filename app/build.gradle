@@ -1,16 +1,14 @@
-apply plugin: 'com.android.application'
-apply plugin: 'com.antfortune.freeline'
+apply plugin: rootProject.ext.plugins.application
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.2"
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
 
     defaultConfig {
         applicationId "com.czq.utilsdemo"
-        minSdkVersion 14
-        targetSdkVersion 24
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
     }
     buildTypes {
         release {
@@ -18,31 +16,26 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    freeline {
-        hack true
-        autoDependency false
-    }
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     //    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.2.0'
-    compile 'com.android.support:support-v4:24.2.0'
     //各式各样的对话框
     //https://github.com/pedant/sweet-alert-dialog
-    compile 'cn.pedant.sweetalert:library:1.3'
     //    compile 'com.belerweb:pinyin4j:2.5.1'
     //下拉刷新上拉加载更多
     //https://github.com/bingoogolapple/BGARefreshLayout-Android
+    //okhttp网络框架
+    // volley网络框架
+    //xutils3网络框架
+    compile rootProject.ext.dependencies.appcompatV7
+    compile rootProject.ext.dependencies.cardviewV7
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'cn.pedant.sweetalert:library:1.3'
     compile 'cn.bingoogolapple:bga-refreshlayout:1.1.6'
     compile 'com.nineoldandroids:library:2.4.0'
-    //okhttp网络框架
     compile 'com.squareup.okhttp3:okhttp:3.5.0'
-    // volley网络框架
     compile 'eu.the4thfloor.volley:com.android.volley:2015.05.28'
-    //xutils3网络框架
     compile 'org.xutils:xutils:3.3.40'
-    //freeline
-    compile 'com.antfortune.freeline:runtime:0.6.2'
 }

@@ -3,13 +3,18 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="distributionType" value="LOCAL" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="H:\AndroidStudio\android-studio\gradle\gradle-2.14.1" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/camerademo" />
+            <option value="$PROJECT_DIR$/mvpDemo" />
+            <option value="$PROJECT_DIR$/refreshdemo" />
+            <option value="$PROJECT_DIR$/retorfitrxmvpdemo" />
+            <option value="$PROJECT_DIR$/screendemo" />
+            <option value="$PROJECT_DIR$/taobaomain" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

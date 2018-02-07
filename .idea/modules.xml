@@ -4,6 +4,12 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/UtilsDemo.iml" filepath="$PROJECT_DIR$/UtilsDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/camerademo/camerademo.iml" filepath="$PROJECT_DIR$/camerademo/camerademo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mvpDemo/mvpDemo.iml" filepath="$PROJECT_DIR$/mvpDemo/mvpDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/refreshdemo/refreshdemo.iml" filepath="$PROJECT_DIR$/refreshdemo/refreshdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/retorfitrxmvpdemo/retorfitrxmvpdemo.iml" filepath="$PROJECT_DIR$/retorfitrxmvpdemo/retorfitrxmvpdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/screendemo/screendemo.iml" filepath="$PROJECT_DIR$/screendemo/screendemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/taobaomain/taobaomain.iml" filepath="$PROJECT_DIR$/taobaomain/taobaomain.iml" />
     </modules>
   </component>
 </project>

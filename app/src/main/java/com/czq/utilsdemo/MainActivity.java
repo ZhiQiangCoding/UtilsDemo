@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.czq.utilsdemo.activity.BaseActivity;
 import com.czq.utilsdemo.activity.TestBGARefreshlayoutActivity;
 import com.czq.utilsdemo.activity.TestListViewActivity;
+import com.czq.utilsdemo.qqZone.QQZoneActivity;
 import com.czq.utilsdemo.utils.LogUtils;
 import com.czq.utilsdemo.utils.ToastUtils;
 import com.czq.utilsdemo.widget.EditTextWithDelete;
@@ -21,6 +22,8 @@ public class MainActivity extends BaseActivity {
     private EditTextWithDelete et_phone;//待删除的edittext
     private TextView tv_test_adapter;//测试 万能适配器
     private TextView tv_bgaRefreshlayout;//测试 下拉刷新下拉加载更多
+    private TextView tv_qqzone;//测试 仿qq空间图片缩放
+    private TextView lock_pattern_txt;//测试 九宫格锁
 
     /**
      * 初始化布局以及view控件
@@ -35,6 +38,8 @@ public class MainActivity extends BaseActivity {
         et_phone = getViewById(R.id.et_phone);
         tv_test_adapter = getViewById(R.id.tv_test_adapter);
         tv_bgaRefreshlayout=getViewById(R.id.tv_bgaRefreshlayout);
+        tv_qqzone=getViewById(R.id.tv_qqzone);
+        lock_pattern_txt=getViewById(R.id.lock_pattern_txt);
 
     }
 
@@ -47,6 +52,8 @@ public class MainActivity extends BaseActivity {
         et_phone.setOnClickListener(this);
         tv_test_adapter.setOnClickListener(this);
         tv_bgaRefreshlayout.setOnClickListener(this);
+        tv_qqzone.setOnClickListener(this);
+        lock_pattern_txt.setOnClickListener(this);
     }
 
     /**
@@ -88,6 +95,12 @@ public class MainActivity extends BaseActivity {
             case R.id.tv_bgaRefreshlayout://测试下拉刷新上拉加载更多
                 ToastUtils.show(App.getInstance(), "测试下拉刷新上拉加载更多");
                 startActivity(new Intent(mActivity, TestBGARefreshlayoutActivity.class));
+                break;
+            case R.id.tv_qqzone://仿qq空间图片缩放
+                startActivity(new Intent(mActivity, QQZoneActivity.class));
+                break;
+            case R.id.lock_pattern_txt://测试九宫格锁
+                startActivity(new Intent(mActivity, QQZoneActivity.class));
                 break;
         }
     }

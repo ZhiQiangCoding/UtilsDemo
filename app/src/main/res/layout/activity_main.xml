@@ -35,8 +35,8 @@
             <LinearLayout
                 android:id="@+id/ll_dayNight"
                 style="@style/matchWrap.horizontal"
-                android:paddingLeft="@dimen/marging_16"
-                android:paddingRight="@dimen/marging_16">
+                android:paddingLeft="@dimen/padding_16"
+                android:paddingRight="@dimen/padding_16">
 
                 <TextView
                     android:id="@+id/tv_dayNight"
@@ -64,11 +64,24 @@
                 style="@style/matchWrap"
                 android:padding="@dimen/padding_10"
                 android:text="测试万能适配器" />
+
             <TextView
                 android:id="@+id/tv_bgaRefreshlayout"
                 style="@style/matchWrap"
                 android:padding="@dimen/padding_10"
                 android:text="BGARefreshLayout" />
+
+            <TextView
+                android:id="@+id/tv_qqzone"
+                style="@style/matchWrap"
+                android:padding="@dimen/padding_10"
+                android:text="仿qq空间" />
+
+            <TextView
+                android:id="@+id/lock_pattern_txt"
+                style="@style/matchWrap"
+                android:padding="@dimen/padding_10"
+                android:text="九宫格锁" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

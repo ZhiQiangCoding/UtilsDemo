@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.czq.utilsdemo">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission-sdk-23 android:name="android.permission.INTERNET" />
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -12,15 +14,24 @@
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
         <activity android:name=".MainActivity">
+
+        </activity>
+        <activity android:name=".activity.TestListViewActivity" />
+        <activity android:name=".activity.TestBGARefreshlayoutActivity" />
+        <activity android:name=".activity.TestHttpActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.TestListViewActivity" />
-        <activity android:name=".activity.TestBGARefreshlayoutActivity" />
-        <activity android:name=".activity.TestHttpActivity"></activity>
+        <activity android:name=".activity.TestTouchActivity" />
+        <activity android:name=".qqZone.QQZoneActivity" />
+        <activity android:name=".activity.LockPatternActivity" />
+        <activity android:name=".popup.TestPopupActivity">
+
+        </activity>
     </application>
 
 </manifest>

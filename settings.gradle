@@ -1,1 +1,1 @@
-include ':app'
+include ':app', ':mvpDemo', ':retorfitrxmvpdemo', ':camerademo', ':taobaomain', ':screendemo', ':refreshdemo'

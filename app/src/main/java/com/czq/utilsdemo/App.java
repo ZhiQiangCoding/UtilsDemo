@@ -4,7 +4,6 @@ import android.app.Application;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
-import com.antfortune.freeline.FreelineCore;
 import com.czq.utilsdemo.utils.FlashBackUtils;
 
 import org.xutils.x;
@@ -35,7 +34,5 @@ public class App extends Application {
         //初始化 xutils3
         x.Ext.init(this);
         x.Ext.setDebug(BuildConfig.DEBUG);
-        //初始化freeline
-        FreelineCore.init(this);
     }
 }

@@ -1,0 +1,46 @@
+apply plugin: rootProject.ext.plugins.application
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.czq.taobaomain"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    //优化gradle编译时间
+    tasks.whenTaskAdded { task ->
+        if (task.name.contains("lint")//如果instant run不生效，把clean这行干掉
+                //task.name.equals("clean")
+                || task.name.contains("Aidl")//项目中有用到aidl则不可以舍弃这个任务
+                || task.name.contains("mockableAndroidJar")
+                || task.name.contains("UnitTest")//用不到测试的时候就可以先关闭
+                || task.name.contains("AndroidTest")
+                || task.name.contains("Ndk")//用不到NDK和JNI的也关闭掉
+                || task.name.contains("Jni")
+        ) {
+            task.enabled = false
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile rootProject.ext.dependencies.appcompatV7
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+}

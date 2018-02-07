@@ -19,10 +19,15 @@
     <!--外边距相关-->
     <dimen name="margin_5">5dp</dimen>
     <dimen name="margin_10">10dp</dimen>
-    <dimen name="marging_16">16dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
     <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_50">50dp</dimen>
     <!--分割线相关-->
     <dimen name="lines_0.1">0.1dp</dimen>
     <dimen name="lines_1">1dp</dimen>
     <dimen name="lines_2">2dp</dimen>
+
+    <dimen name="negative_margin_20">-20dp</dimen>
+    <dimen name="iv_default">300dp</dimen>
+    <dimen name="iv_wh_50">50dp</dimen>
 </resources>
