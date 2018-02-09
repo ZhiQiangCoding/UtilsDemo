@@ -10,7 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.czq.utilsdemo.R;
-import com.czq.utilsdemo.httputils.IRequestCallBack;
+import com.czq.utilsdemo.httputils.IRequestCallback;
 import com.czq.utilsdemo.httputils.IRequestManager;
 import com.czq.utilsdemo.httputils.RequestFactory;
 import com.czq.utilsdemo.utils.LogUtils;
@@ -42,18 +42,18 @@ public class TestHttpActivity extends AppCompatActivity {
         mBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                requestManager.get(url, new IRequestCallBack() {
+                requestManager.get(url, new IRequestCallback() {
                     @Override
-                    public void onSuccess(String response) {
+                    public void onSuccess(String json) {
                         boolean isMian = Looper.getMainLooper() == Looper.myLooper();
                         LogUtils.e("====" + isMian);
-                        Log.e(TAG, "onSuccess: " + response);
+                        Log.e(TAG, "onSuccess: " + json);
                         Toast.makeText(TestHttpActivity.this, "onSuccess", Toast.LENGTH_SHORT).show();
-                        mTvShow.setText(response);
+                        mTvShow.setText(json);
                     }
 
                     @Override
-                    public void onFailure(Throwable throwable) {
+                    public void onFailure(String msg, String code, Throwable throwable) {
                         boolean isMian = Looper.getMainLooper() == Looper.myLooper();
                         LogUtils.e("====" + isMian);
                         Log.e(TAG, "onFailure: " + throwable.getMessage());
